@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.prologo img {
+    width: 60px;
+}
+
+header {
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+
+
+
+.navigation a {
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+
+.navigation a:hover {
+    color: #6f3a8d;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 20em;
+}
+
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.banner::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(9, 60, 95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .3;
+}
+
+.heading {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.bokking {
+    background: white;
+    background-size: cover;
+    padding-bottom: 4.5em;
+    padding-top: 1px;
+}
+
+.titleb {
+    display: flex;
+    justify-content: center;
+    color: rgb(8, 59, 90);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 40px;
+    padding-top: 50px;
+}
+
+.contentb {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.cardb {
+    background-color: #ffffff;
+    width: 16.50em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.cardb:hover {
+    transform: scale(1.1);
+}
+
+.infob {
+    text-align: center;
+
+}
+
+.infob h1 {
+    color: #235C93;
+}
+
+.infob h2 {
+    color: #083B5A;
+}
+
+.cardb2 {
+    background-color: #3D9BE9;
+    width: 16.50em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.cardb2:hover {
+    transform: scale(1.1);
+}
+
+.infob2 {
+    text-align: center;
+}
+
+.quickbooks {
+    background-color: rgb(61, 155, 233);
+    text-align: center;
+    height: 12em;
+    padding: 50px 200px;
+}
+
+.div1 h1 {
+    color: rgb(8, 59, 90);
+    padding-bottom: 1em;
+}
+
+.div1 ul li {
+    color: white;
+    list-style: inside;
+}
+
+.li-btn {
+    list-style: none;
+
+}
+
+.half {
+    display: flex;
+    width: 100%;
+    height: 36em;
+}
+
+.half1 {
+    background-color: #235C93;
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+
+.con-hr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-hr {
+    border: 1px solid white;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.con-hr2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-hr2 {
+    border: 1px solid rgb(61, 155, 233);
+    width: 50%;
+    border-radius: 20px;
+}
+
+
+.half2 {
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+}
+
+.services1 {
+    list-style-position: inside;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    list-style: square;
+}
+
+.services1div {
+    width: 20em;
+    background-color: rgb(0, 70, 150);
+}
+
+
+.services2-div {
+    width: 20em;
+}
+
+
+
+.services1-cost {
+    list-style-position: inside;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    list-style: none;
+}
+
+.services2-cost {
+    list-style-position: inside;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    list-style: none;
+}
+
+.half1 h1 {
+    color: white;
+    text-align: center;
+    padding-top: 2em;
+}
+
+
+.half2 h1 {
+    color: rgb(0, 70, 150);
+    text-align: center;
+    padding-top: 2em;
+}
+
+.half1 hr {
+    width: 10cm;
+    text-align: center;
+}
+
+.second-half {
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.payroll {
+    padding-top: 3.5em;
+    padding-bottom: 3em;
+}
+
+.payroll h1 {
+    color: rgb(8, 59, 90);
+    padding-left: 9em;
+}
+
+.payroll ul li {
+    list-style: none;
+    padding-left: 8em;
+}
+
+.payroll ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgb(10, 146, 205);
+    background-color: rgb(10, 146, 205);
+    font-size: 0.9em;
+    font-weight: 400;
+    padding: 7px 12px;
+    letter-spacing: 1px;
+    transition: 0.7s ease;
+}
+
+.payroll ul li a:hover {
+    background-color: rgb(59, 162, 206);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: rgb(61, 155, 233);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 16.50em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: rgb(61, 155, 233);
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+
+}
+
+.info h3 {
+    color: rgb(61, 155, 233);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.btn-book {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.btn-book a {
+    color: #ffffff;
+    background-color: rgb(10, 146, 205);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-top: 10px;
+    transition: 0.7s ease;
+    margin-bottom: 1em;
+}
+
+.btn-book a:hover {
+    background-color: #0a49f6;
+    transform: scale(1);
+}
+
+.footer {
+    background-color: rgb(61, 155, 233);
+    color: #fff;
+    padding-top: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    justify-content: space-between;
+    height: 13em;
+}
+
+.footer-title {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer-info ul li {
+    list-style: none;
+}
+
+.p-footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .social-icons a {
+    font-size: 1.4em;
+    padding: 0 10px 0 0;
+}
+
+@media (max-width: 641px) {
+
+    .services1 ul li {
+        font-size: 8px;
+    }
+
+    .second-half ul li {
+        font-size: 8px;
+    }
+
+    .second-half p {
+        font-size: 8px;
+    }
+
+    .quickbooks {
+        padding: 1px;
+        height: 8em;
+    }
+
+    .div1 h1 {
+        font-size: 20px;
+    }
+
+    .div1 ul li {
+        font-size: 10px;
+    }
+
+    .payroll h1 {
+        padding: 1px 1px 1px 20px;
+    }
+
+    .payroll ul li {
+        padding-left: 20px;
+    }
+
+    .payroll ul li a {
+        margin-left: 15em;
+    }
+
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+    }
+
+    footer {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .p-footer {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 641px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.3em;
+    }
+
+    footer {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .p-footer {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width:300px) {
+    body {
+        font-size: 10px;
+
+    }
+}

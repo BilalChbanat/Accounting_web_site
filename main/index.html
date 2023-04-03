@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords"
+        content="compta, accounting, bookkeeping, accountant, comptable, comptablité, tenue de compte">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description"
+        content="ProCompta Services Comptables Inc. offers clients a wide range of accounting services. We know our clients have a lot to do, and with our expertise, we can take care of your accounting, so you can take care of your business">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+        crossorigin="anonymous">
+    <title>Accueil | ProCompta Services Comptables Inc.</title>
+    <script>
+        function showSections() {
+            var x = document.getElementById('learnMore');
+            if (x.style.display == 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+
+
+            var y = document.getElementById('learnMore2');
+            if (y.style.display == 'none') {
+                y.style.display = 'flex';
+            } else {
+                y.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="prologo"><img src="../images/ProCompta- logo only.png" alt=""></a>
+
+        <nav class="navigation">
+            <a href="#" class="logo">Home</a>
+            <a href="Serviestarifs.html">Services</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+
+    <section class="main">
+        <div>
+            <h2><br><span>Let us handle your accounting, so you could focus on growing your business!</span></h2>
+            <h3>All Accounting Services for Small Businesses</h3>
+            <a href="#projectes" class="main-btn">About Us</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projectes">
+        <h2 class="title">Why Us</h2>
+        <div class="project-image">
+            <div class="ul-imgs">
+                <img src="../images/whyus.jpg" />
+            </div>
+
+            <div class="p-info">
+                <div class="p-r">
+                    <p>15+ years of accounting experience in different sectors like Construction, Manufacturing,
+                        international trade, Investments, Medical, Real estate, and more.
+
+                        We offer personalized and affordable services to clients to clients across Canada.</p>
+                    <br> <br> <br> <a href="Serviestarifs.html" class="services-btn">Go to services</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="contactus-div">
+        <h2 class="titlec" id="contact">Contact Us</h2>
+        <div class="contact-wrap">
+            <div class="contact-in">
+                <h1>Contact Info</h1>
+                <h2><i class="fas fa-phone" id="rota" aria-hidden="true"></i>
+                    Phone</h2>
+                <p>123-456-789</p>
+                <h2><i class="fas fa-envelope" aria-hidden="true"></i>E-mail</h2>
+                <p>mail@gmail.com</p>
+                <h2><i class="fas fa-map-marker" aria-hidden="true"></i>Address</h2>
+                <p>canada test</p>
+                <ul>
+                    <li><a href="https://web.facebook.com/ProCompta-Services-Comptables-108268417244798?_rdc=1&_rdr"
+                            target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i>
+                        </a></li>
+                    <li><a href="https://www.linkedin.com/company/procompta-bookkeeping-services-inc/about/?viewAsMember=true"
+                            target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="contact-in">
+                <h1>Send a Message</h1>
+                <form onsubmit="sendEmail(); reset(); return false">
+                    <input type="text" id="name" placeholder="Full Name" class="contact-in-input">
+                    <input type="email" id="email" placeholder="E-mail" class="contact-in-input">
+                    <input type="text" id="subject" placeholder="Subject" class="contact-in-input">
+                    <textarea placeholder="Message" id="message" class="contact-in-textarea"></textarea>
+                    <input type="submit" onclick="messagef1()" value="SUBMIT" class="contact-in-btn">
+                </form>
+                <div class="message">
+                    <div class="success" id="success">
+                        Your Message Successfully Sent!
+                    </div>
+                    <div class="danger" id="danger">Feilds Can't be Empty!</div>
+                </div>
+            </div>
+            <div class="contact-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2794.4294927822934!2d-73.612568!3d45.541685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9193e2bc4cba9%3A0x2c8505be280a9cb7!2s911%20Rue%20Jean-Talon%20E%20Bureau%20316%2C%20Montr%C3%A9al%2C%20QC%20H2R%201V5%2C%20Canada!5e0!3m2!1sen!2sin!4v1659881970846!5m2!1sen!2sin"
+                    width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-mail">
+                <h2>E-mail:</h2>
+                <ul>
+                    <li> pro-info@procompta.ca</li>
+                </ul>
+            </div>
+            <div class="footer-phone">
+                <h2>Phone:</h2>
+                <ul>
+                    <li>(514) 612-8360</li>
+                </ul>
+            </div>
+            <div class="footer-location">
+                <h2>Address:</h2>
+                <ul>
+                    <li>- 911 Rue Jean-Talon Est - Suite 316. <br>
+                        Montreal, QC H2R 1V5</li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/procompta-bookkeeping-services-inc/about/?viewAsMember=true"
+                    target="_blank"><i class='fab fa-linkedin'></i></a>
+                <a href="https://web.facebook.com/ProCompta-Services-Comptables-108268417244798?_rdc=1&_rdr"
+                    target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="p-footer">
+            <p>©2020 by ProCompta Services Comptables Inc.</p>
+        </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "nadia.chbanat@procomta.ca",
+                Password: "394AEDF31425DA13E505E94716F6F0A2056B",
+                To: 'nadia.chbanat@procompta.ca',
+                From: "nadia.chbanat@procompta.ca", // document.getElementById("email").value,
+                Subject: "You received an email from " + document.getElementById("name").value,
+                Body: "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Subject: " + document.getElementById("subject").value
+                    + "<br> Message: " + document.getElementById("message").value
+            })
+        }
+
+        function messagef1() {
+            var nom = document.getElementById("name");
+            var gmail = document.getElementById("email");
+            var sbjct = document.getElementById("subject");
+            var msgf1 = document.getElementById("message");
+            const success = document.getElementById("success");
+            const danger = document.getElementById("danger");
+            if (nom.value === "" || gmail.value === "" || msgf1.value === "") {
+                danger.style.display = "block";
+            } else {
+                setTimeout(() => {
+                    nom.value = "";
+                    gmail.value = "";
+                    msgf1.value = "";
+                }, 2000);
+                success.style.display = "block";
+            }
+
+            setTimeout(() => {
+                danger.style.display = "none";
+                success.style.display = "none";
+            }, 4000);
+        }
+    </script>
+</body>
+
+</html>
