@@ -34,6 +34,13 @@
             }
         }
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("6sxB-TBGNH5VhJVro");
+        })();
+    </script>
 </head>
 
 <body>
@@ -102,13 +109,12 @@
             </div>
             <div class="contact-in">
                 <h1>Send a Message</h1>
-                <form onsubmit="sendEmail(); reset(); return false">
-                    <input type="text" id="name" placeholder="Full Name" class="contact-in-input">
-                    <input type="email" id="email" placeholder="E-mail" class="contact-in-input">
-                    <input type="text" id="subject" placeholder="Subject" class="contact-in-input">
-                    <textarea placeholder="Message" id="message" class="contact-in-textarea"></textarea>
-                    <input type="submit" onclick="messagef1()" value="SUBMIT" class="contact-in-btn">
-                </form>
+
+                <input type="text" id="name" placeholder="Full Name" class="contact-in-input">
+                <input type="email" id="email_id" placeholder="E-mail" class="contact-in-input">
+                <input type="text" id="subject" placeholder="Subject" class="contact-in-input">
+                <textarea placeholder="Message" id="message" class="contact-in-textarea"></textarea>
+                <button type="submit" onclick="sendEmail()" class="contact-in-btn">SUBMIT</button>
                 <div class="message">
                     <div class="success" id="success">
                         Your Message Successfully Sent!
@@ -165,44 +171,39 @@
     </footer>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <script>
         function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "nadia.chbanat@procomta.ca",
-                Password: "394AEDF31425DA13E505E94716F6F0A2056B",
-                To: 'nadia.chbanat@procompta.ca',
-                From: "nadia.chbanat@procompta.ca", // document.getElementById("email").value,
-                Subject: "You received an email from " + document.getElementById("name").value,
-                Body: "Name: " + document.getElementById("name").value
-                    + "<br> Email: " + document.getElementById("email").value
-                    + "<br> Subject: " + document.getElementById("subject").value
-                    + "<br> Message: " + document.getElementById("message").value
-            })
-        }
-
-        function messagef1() {
-            var nom = document.getElementById("name");
-            var gmail = document.getElementById("email");
-            var sbjct = document.getElementById("subject");
-            var msgf1 = document.getElementById("message");
-            const success = document.getElementById("success");
+            var name = document.getElementById("name").value;
             const danger = document.getElementById("danger");
-            if (nom.value === "" || gmail.value === "" || msgf1.value === "") {
-                danger.style.display = "block";
-            } else {
-                setTimeout(() => {
-                    nom.value = "";
-                    gmail.value = "";
-                    msgf1.value = "";
-                }, 2000);
-                success.style.display = "block";
+            var email = document.getElementById("email_id").value;
+            var message = document.getElementById("message").value;
+            var subject = document.getElementById("subject").value;
+            function validateEmail(email) {
+                // Regular expression for basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                // Test the email against the regex
+                return emailRegex.test(email);
             }
 
-            setTimeout(() => {
-                danger.style.display = "none";
-                success.style.display = "none";
-            }, 4000);
+            // Example usage:
+            const emailToValidate = document.getElementById("email_id").value;
+            if (!validateEmail(emailToValidate) || name == "" || message == "" || subject == "") {
+                danger.style.display = "block";
+            } else {
+                const success = document.getElementById("success");
+
+                var params = {
+                    form_name: document.getElementById("name").value,
+                    email_id: document.getElementById("email_id").value,
+                    subject: document.getElementById("subject").value,
+                    message: document.getElementById("message").value,
+                }
+                emailjs.send("service_ausgop9", "template_ernrpbf", params).then(function (res) {
+                    success.style.display = "block";
+                })
+            }
         }
     </script>
 </body>
