@@ -16,31 +16,7 @@
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
         crossorigin="anonymous">
     <title>Accueil | ProCompta Services Comptables Inc.</title>
-    <script>
-        function showSections() {
-            var x = document.getElementById('learnMore');
-            if (x.style.display == 'none') {
-                x.style.display = 'block';
-            } else {
-                x.style.display = 'none';
-            }
-
-
-            var y = document.getElementById('learnMore2');
-            if (y.style.display == 'none') {
-                y.style.display = 'flex';
-            } else {
-                y.style.display = 'none';
-            }
-        }
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("6sxB-TBGNH5VhJVro");
-        })();
-    </script>
+    
 </head>
 
 <body>
@@ -95,7 +71,7 @@
                     Phone</h2>
                 <p>(514) 612-8360</p>
                 <h2><i class="fas fa-envelope" aria-hidden="true"></i>E-mail</h2>
-                <p>pro-info@procompta.ca</p>
+                <p>procompta2@gmail.com</p>
                 <h2><i class="fas fa-map-marker" aria-hidden="true"></i>Address</h2>
                 <p>- 911 Rue Jean-Talon Est - Suite 316. <br>
                 Montreal, QC H2R 1V5</p>
@@ -110,7 +86,7 @@
             </div>
             <div class="contact-in">
                 <h1>Send a Message</h1>
-                <form onsubmit="validateForm(event)" action="https://getform.io/f/lbjnzdwb" method="POST" >
+                <form action="https://getform.io/f/pbmznjna" method="POST">
                     <input type="text" name="name" id="name" placeholder="Full Name" class="contact-in-input" required>
                     <input type="email" name="email" id="email" placeholder="E-mail" class="contact-in-input" required>
                     <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-in-input" required>
@@ -141,7 +117,7 @@
             <div class="footer-mail">
                 <h2>E-mail:</h2>
                 <ul>
-                    <li> pro-info@procompta.ca</li>
+                    <li> procompta2@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-phone">
@@ -172,45 +148,7 @@
         </div>
     </footer>
 
-    <script>
-        function validateForm(event) {
-                event.preventDefault(); // Prevent form submission
-
-                // Get form inputs
-                var nameInput = document.getElementById('name');
-                var emailInput = document.getElementById('email');
-
-                // Get values
-                var nameValue = nameInput.value.trim();
-                var emailValue = emailInput.value.trim();
-
-                // Check if any field is empty or name has a number
-                if (nameValue === '' || !isNaN(nameValue) || emailValue === '') {
-                    displayErrorMessage();
-                } else if (!validateEmail(emailValue)) {
-                    displayErrorMessage();
-                } else {
-                    // If all validations pass, submit the form
-                    document.getElementById('danger').style.display = 'none';
-                    document.getElementById('success').style.display = 'block';
-                    setTimeout(function () {
-                        // Optional: Redirect to another page or perform additional actions after successful submission
-                        // window.location.href = 'success.html';
-                    }, 2000);
-                }
-            }
-
-            function validateEmail(email) {
-                // Regular expression for basic email validation
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
-
-            function displayErrorMessage() {
-                document.getElementById('danger').style.display = 'block';
-                document.getElementById('success').style.display = 'none';
-            }
-    </script>
+    
 </body>
 
 </html>
