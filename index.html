@@ -93,11 +93,12 @@
                 <h1>Contact Info</h1>
                 <h2><i class="fas fa-phone" id="rota" aria-hidden="true"></i>
                     Phone</h2>
-                <p>123-456-789</p>
+                <p>(514) 612-8360</p>
                 <h2><i class="fas fa-envelope" aria-hidden="true"></i>E-mail</h2>
-                <p>mail@gmail.com</p>
+                <p>pro-info@procompta.ca</p>
                 <h2><i class="fas fa-map-marker" aria-hidden="true"></i>Address</h2>
-                <p>canada test</p>
+                <p>- 911 Rue Jean-Talon Est - Suite 316. <br>
+                Montreal, QC H2R 1V5</p>
                 <ul>
                     <li><a href="https://web.facebook.com/ProCompta-Services-Comptables-108268417244798?_rdc=1&_rdr"
                             target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i>
@@ -109,18 +110,19 @@
             </div>
             <div class="contact-in">
                 <h1>Send a Message</h1>
-
-                <input type="text" id="name" placeholder="Full Name" class="contact-in-input">
-                <input type="email" id="email_id" placeholder="E-mail" class="contact-in-input">
-                <input type="text" id="subject" placeholder="Subject" class="contact-in-input">
-                <textarea placeholder="Message" id="message" class="contact-in-textarea"></textarea>
-                <button type="submit" onclick="sendEmail()" class="contact-in-btn">SUBMIT</button>
-                <div class="message">
-                    <div class="success" id="success">
-                        Your Message Successfully Sent!
+                <form onsubmit="validateForm(event)" action="https://getform.io/f/lbjnzdwb" method="POST" >
+                    <input type="text" name="name" id="name" placeholder="Full Name" class="contact-in-input" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" class="contact-in-input" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" class="contact-in-input" required>
+                    <textarea placeholder="Message" name="message" id="message" class="contact-in-textarea"></textarea>
+                    <button type="submit" onclick="sendEmail()" class="contact-in-btn">SUBMIT</button>
+                    <div class="message">
+                        <div class="success" id="success">
+                            Your Message Successfully Sent!
+                        </div>
+                        <div class="danger" id="danger">Feilds Can't be Empty!</div>
                     </div>
-                    <div class="danger" id="danger">Feilds Can't be Empty!</div>
-                </div>
+                </form>
             </div>
             <div class="contact-in">
                 <iframe
@@ -170,41 +172,44 @@
         </div>
     </footer>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
     <script>
-        function sendEmail() {
-            var name = document.getElementById("name").value;
-            const danger = document.getElementById("danger");
-            var email = document.getElementById("email_id").value;
-            var message = document.getElementById("message").value;
-            var subject = document.getElementById("subject").value;
+        function validateForm(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get form inputs
+                var nameInput = document.getElementById('name');
+                var emailInput = document.getElementById('email');
+
+                // Get values
+                var nameValue = nameInput.value.trim();
+                var emailValue = emailInput.value.trim();
+
+                // Check if any field is empty or name has a number
+                if (nameValue === '' || !isNaN(nameValue) || emailValue === '') {
+                    displayErrorMessage();
+                } else if (!validateEmail(emailValue)) {
+                    displayErrorMessage();
+                } else {
+                    // If all validations pass, submit the form
+                    document.getElementById('danger').style.display = 'none';
+                    document.getElementById('success').style.display = 'block';
+                    setTimeout(function () {
+                        // Optional: Redirect to another page or perform additional actions after successful submission
+                        // window.location.href = 'success.html';
+                    }, 2000);
+                }
+            }
+
             function validateEmail(email) {
                 // Regular expression for basic email validation
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                // Test the email against the regex
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return emailRegex.test(email);
             }
 
-            // Example usage:
-            const emailToValidate = document.getElementById("email_id").value;
-            if (!validateEmail(emailToValidate) || name == "" || message == "" || subject == "") {
-                danger.style.display = "block";
-            } else {
-                const success = document.getElementById("success");
-
-                var params = {
-                    form_name: document.getElementById("name").value,
-                    email_id: document.getElementById("email_id").value,
-                    subject: document.getElementById("subject").value,
-                    message: document.getElementById("message").value,
-                }
-                emailjs.send("service_ausgop9", "template_ernrpbf", params).then(function (res) {
-                    success.style.display = "block";
-                })
+            function displayErrorMessage() {
+                document.getElementById('danger').style.display = 'block';
+                document.getElementById('success').style.display = 'none';
             }
-        }
     </script>
 </body>
 
